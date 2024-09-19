@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import WelComeScreen from '../screens/auth/Welcome';
 // import PasswordScreen from '../screens/auth/Password';
 // // import SignupScreen from '../screens/auth/OtpRegister';
-// import OTPVerificationScreen from '../screens/auth/VerificationScreen';
+import OTPVerificationScreen from '../screens/auth/VerificationScreen';
 // import RegisterPasswordScreen from '../screens/auth/RegisterPassword';
 import { NavigationProvider } from '../utilities/loader/NavigationContext';
 // import LoadingOverlay from '../utilities/loader/LoadingScreen';
@@ -27,12 +27,13 @@ const AuthStack = () => {
           name="Password"
           component={PasswordScreen}
           options={{ headerShown: false }}
-        />
+        />*/}
         <Stack.Screen
           name="OTPVerification"
           component={OTPVerificationScreen}
           options={{ headerShown: false }}
         />
+        {/*
         <Stack.Screen
           name="RegisterDetails"
           component={RegisterDetailsScreen}
