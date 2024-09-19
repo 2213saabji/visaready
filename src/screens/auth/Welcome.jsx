@@ -4,6 +4,7 @@ import React, {
 } from 'react';
 import {StyleSheet, 
   Text,
+  TouchableOpacity,
   // SafeAreaView, 
   // View, 
   // Image, 
@@ -18,7 +19,11 @@ const WelcomeScreen = ({navigation, route}) => {
 
 
   return (
-  <><Text style={{color:"black"}}>helo</Text></>
+  <>
+  <TouchableOpacity onPress={()=>navigation.navigate("OTPVerification")}>
+  <Text style={{color:"black",fontSize:50}} >helo</Text>
+  </TouchableOpacity>
+  </>
   );
 };
 
