@@ -9,7 +9,7 @@ import OTPVerificationScreen from '../screens/auth/VerificationScreen';
 import { NavigationProvider } from '../utilities/loader/NavigationContext';
 // import LoadingOverlay from '../utilities/loader/LoadingScreen';
 // import RegisterDetailsScreen from '../screens/auth/RegisterDetails';
-// import ForgotPassword from '../screens/auth/ForgotPassword';
+import ForgotPassword from '../screens/auth/ForgotPassword';
 
 const Stack = createStackNavigator();
 
@@ -44,11 +44,12 @@ const AuthStack = () => {
           component={RegisterPasswordScreen}
           options={{ headerShown: false }}
         />
+        */}
         <Stack.Screen
           name="ForgotPassword"
           component={ForgotPassword}
           options={{ headerShown: false }}
-        /> */}
+        />
         
       </Stack.Navigator>
     </NavigationProvider>

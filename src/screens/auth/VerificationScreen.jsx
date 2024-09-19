@@ -234,10 +234,16 @@ const OTPVerificationScreen = ({navigation, route}) => {
 
         <TouchableOpacity
           style={[styles.submitButton,{backgroundColor: colors.Primary['-6'],marginTop:10}]}
-          onPress={
-            forgotPasswordScreen
-              ? handleNextForgotPasswordToVerification
-              : handleSubmit
+          onPress={()=>
+            // forgotPasswordScreen
+            //   ? handleNextForgotPasswordToVerification
+            //   : handleSubmit
+            navigation.navigate('Auth', {
+                        screen: 'ForgotPassword',
+                        params: {
+                          mobileNumber,
+                        },
+                      })
           }>
           <Text style={[styles.submitButtonText, {color: colors.text.white}]}>
             {loading ? 'Processing...' : 'Verify OTP'}
