@@ -11,7 +11,8 @@ import {
   Alert,
   Button,
   TextInput,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableOpacity
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -82,11 +83,13 @@ const WelcomeScreen = ({ navigation, route }) => {
           </View>
         </TouchableHighlight>
       </View>
-
+<TouchableOpacity onPress={()=>navigation.navigate("OTPVerification")}>
+  
       <View style={loginStyles.signUp}>
         <Text style={{ color: 'black' }}>Don't you have an account?</Text>
         <Text style={{ color: 'blue' }}>Sign up</Text>
       </View>
+</TouchableOpacity>
 
     </SafeAreaView>
   );
